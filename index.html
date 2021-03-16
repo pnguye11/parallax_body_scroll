@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="jarallax.css" />
+
     <title>Awesome Parallax Scroll</title>
   </head>
   <body>
     <section>
       <div class="box">
-        <h2>Toulouse</h2>
-        <div class="comtainer">
-          <div class="imgBx">
-            <img src="images/toulouse.jpeg" alt="" srcset="" />
+        <h2 data-jarallax-element="0 -200">Toulouse</h2>
+        <div class="container">
+          <div class="imgBx jarallax">
+            <img src="images/toulouse.jpeg" class="jarallax-img" />
           </div>
-          <div class="content">
+          <div class="content" data-jarallax-element="-200 0">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non amet
               fugit porro atque eligendi alias aperiam, nobis ipsam, nemo
@@ -26,5 +28,48 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="box">
+        <h2 data-jarallax-element="0 200">Ellie</h2>
+        <div class="container">
+          <div class="imgBx jarallax">
+            <img src="images/ellie.jpeg" class="jarallax-img" />
+          </div>
+          <div class="content" data-jarallax-element="-200 0">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non amet
+              fugit porro atque eligendi alias aperiam, nobis ipsam, nemo
+              dolorum debitis aspernatur! Corporis fuga velit modi? Consectetur
+              eius autem minus!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="box">
+        <h2 data-jarallax-element="0 -200">Berlioz</h2>
+        <div class="container">
+          <div class="imgBx jarallax">
+            <img src="images/berlioz.jpg" class="jarallax-img" />
+          </div>
+          <div class="content" data-jarallax-element="-200 0">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non amet
+              fugit porro atque eligendi alias aperiam, nobis ipsam, nemo
+              dolorum debitis aspernatur! Corporis fuga velit modi? Consectetur
+              eius autem minus!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="jarallax.js"></script>
+    <script src="jarallax-element.js"></script>
+    <script>
+      jarallax(document.querySelectorAll(".jarallax"), {
+        speed: 0.5,
+      });
+    </script>
   </body>
 </html>
